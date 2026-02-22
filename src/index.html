@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modpack Moover</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .section { margin-bottom: 20px; }
+        button { margin-right: 10px; }
+        .path { font-style: italic; color: #555; }
+        #options { border: 1px solid #ccc; padding: 10px; }
+        label { display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Minecraft Modpack Config Transfer App</h1>
+
+    <div class="section">
+        <h2>Old Modpack</h2>
+        <button id="selectOld">Select Folder</button>
+        <p>Selected Path: <span id="oldPath" class="path">None</span></p>
+    </div>
+
+    <div class="section">
+        <h2>New Modpack</h2>
+        <button id="selectNew">Select Folder</button>
+        <p>Selected Path: <span id="newPath" class="path">None</span></p>
+    </div>
+
+    <div class="section" id="options">
+        <h2>Main Transfer Options</h2>
+        <label><input type="checkbox" id="minecraftConfigs"> Minecraft Configs</label>
+        <label><input type="checkbox" id="createSchematics"> Create Schematics</label>
+        <h3>openstars.scrim.club Only</h3>
+        <label><input type="checkbox" id="xaerosConfigs"> Xaero's Configs</label>
+        <label><input type="checkbox" id="xaerosWorldMap"> Xaero's World Map</label>
+        <label><input type="checkbox" id="xaerosMiniMapWaypoints"> Xaero's Mini-Map Waypoints</label>
+    </div>
+
+    <button id="transfer">Transfer Configs</button>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
