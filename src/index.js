@@ -1,8 +1,7 @@
-// main.js
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('node:path');
 const fs = require('node:fs');
-const fse = require('fs-extra'); // npm install fs-extra
+const fse = require('fs-extra');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -12,7 +11,6 @@ if (require('electron-squirrel-startup')) {
 let mainWindow;
 
 const createWindow = () => {
-  // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 900,
     height: 740,
@@ -24,7 +22,6 @@ const createWindow = () => {
     autoHideMenuBar: true,
   });
 
-  // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools (remove in production)
